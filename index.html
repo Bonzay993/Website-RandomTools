@@ -27,20 +27,27 @@
             <button>Empty</button>
         </div>
     </header>
+    <div class="ads ads-top">
+        <!-- Google Ads top -->
+    </div>
     <div class="content">
         <div class="ads">
             <!-- Google Ads Left -->
         </div>
+        
         <div class="main">
             <!-- Main Content -->
-            <div class="container">
+            
+            
+            <div class="random-word-generator">
                 <h1>Random Word Generator</h1>
+                
                 <div>
                     <label for="numberOfWords">Number of Words:</label>
-                    <input type="number" id="numberOfWords" name="numberOfWords" min="1" required>
+                    <input type="number" id="numberOfWords" name="numberOfWords" min="1">
                 </div>
                 <div>
-                    <label for="wordType">Word Type:</label>
+                    <label for="wordType" class="left-align">Word Type:</label>
                     <select id="wordType" name="wordType">
                         <option value="all">All</option>
                         <option value="noun">Noun</option>
@@ -50,25 +57,29 @@
                 </div>
                 <div>
                     <label for="wordSize">Word Size (letters):</label>
-                    <input type="number" id="wordSize" name="wordSize" min="1" required>
+                    <input type="number" id="wordSize" name="wordSize" min="1">
                 </div>
                 <button onclick="generateWords()">Generate Words</button>
                 <div class="result" id="result"></div>
             </div>
-        <div class="ads">
-            <!-- Google Ads Right -->
-        </div>
+        
     </div>
+    <div class="ads">
+        <!-- Google Ads Right -->
+    </div>
+    </div>
+    
+
+
+
     <div class="footer-ads">
         <!-- Google Ads Above Footer -->
     </div>
+    
     <footer>
         <p>Contact: info@example.com</p>
     </footer>
-    <script>
     
-    
-    </script>
     <script src="./scripts/script.js"></script>
     <script src="./scripts/adjectives.js"></script>
     <script src="./scripts/nouns.js"></script>

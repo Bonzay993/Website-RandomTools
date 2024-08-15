@@ -72,6 +72,8 @@ nav .nav-buttons button:hover {
     width: 100%;
     padding: 20px;
 }
+
+
 .ads {
     width: 10%;
     background-color: #e9ecef;
@@ -81,7 +83,26 @@ nav .nav-buttons button:hover {
 .main {
     width: 60%;
     text-align: center;
+    display:flex;
+    flex-flow:column;
+    justify-content: space-between;
+    gap:20%;
 }
+
+.ads-top{
+    align-self: center;
+
+}
+
+.random-word-generator{
+    text-align: center;
+    height:20rem;
+}
+
+.left-align{
+    text-align: left;
+}
+
 .footer-ads {
     width: 100%;
     background-color: #e9ecef;

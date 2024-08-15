@@ -8,35 +8,38 @@ function toggleMenu() {
 
 
 function generateWords() {
-            const numberOfWords = document.getElementById('numberOfWords').value || 1;
-            const wordType = document.getElementById('wordType').value || 'all';
-            const wordSize = document.getElementById('wordSize').value;
+    const numberOfWords = document.getElementById('numberOfWords').value || 1;
+    const wordType = document.getElementById('wordType').value || 'all';
+    const wordSize = document.getElementById('wordSize').value;
 
-            let wordList;
-            switch (wordType.toLowerCase()) {
-                case "noun":
-                    wordList = NOUNS;
-                    break;
-                case "verb":
-                    wordList = VERBS;
-                    break;
-                case "adjective":
-                    wordList = ADJECTIVES;
-                    break;
-                default:
-                    wordList = [...NOUNS, ...VERBS, ...ADJECTIVES];
-                    break;
-            }
+    let wordList;
+    switch (wordType.toLowerCase()) {
+        case "noun":
+            wordList = NOUNS;
+            break;
+        case "verb":
+            wordList = VERBS;
+            break;
+        case "adjective":
+            wordList = ADJECTIVES;
+            break;
+        default:
+            wordList = [...NOUNS, ...VERBS, ...ADJECTIVES];
+            break;
+    }
 
-            const words = [];
-            while (words.length < numberOfWords) {
-                const word = wordList[Math.floor(Math.random() * wordList.length)];
-                if (!word.size || word.length == wordSize) {
-                    words.push(word);
-                }
-            }
+    const filteredWords = wordList.filter(word => !wordSize || word.length == wordSize);
 
-           
+    if (filteredWords.length === 0) {
+        document.getElementById('result').innerText = "No words found with the specified criteria.";
+        return;
+    }
 
-            document.getElementById('result').innerText = words.join(', ');
+    const words = [];
+    while (words.length < numberOfWords) {
+        const word = filteredWords[Math.floor(Math.random() * filteredWords.length)];
+        words.push(word);
+    }
+
+    document.getElementById('result').innerText = words.join(', ');
 }
