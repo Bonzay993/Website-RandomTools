@@ -1,0 +1,1 @@
+const ADJECTIVES = ["happy", "sad", "fast", "slow", "bright"];

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Logo</div>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="nav-buttons">
+                <button>Empty</button>
+                <button>Empty</button>
+                <button>Empty</button>
+            </div>
+        </nav>
+        <div class="mobile-nav" id="mobileNav">
+            <button>Empty</button>
+            <button>Empty</button>
+            <button>Empty</button>
+        </div>
+    </header>
+    <div class="content">
+        <div class="ads">
+            <!-- Google Ads Left -->
+        </div>
+        <div class="main">
+            <!-- Main Content -->
+            <div class="container">
+                <h1>Random Word Generator</h1>
+                <div>
+                    <label for="numberOfWords">Number of Words:</label>
+                    <input type="number" id="numberOfWords" name="numberOfWords" min="1" required>
+                </div>
+                <div>
+                    <label for="wordType">Word Type:</label>
+                    <select id="wordType" name="wordType">
+                        <option value="all">All</option>
+                        <option value="noun">Noun</option>
+                        <option value="verb">Verb</option>
+                        <option value="adjective">Adjective</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="wordSize">Word Size (letters):</label>
+                    <input type="number" id="wordSize" name="wordSize" min="1" required>
+                </div>
+                <button onclick="generateWords()">Generate Words</button>
+                <div class="result" id="result"></div>
+            </div>
+        <div class="ads">
+            <!-- Google Ads Right -->
+        </div>
+    </div>
+    <div class="footer-ads">
+        <!-- Google Ads Above Footer -->
+    </div>
+    <footer>
+        <p>Contact: info@example.com</p>
+    </footer>
+    <script>
+    
+    
+    </script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/adjectives.js"></script>
+    <script src="./scripts/nouns.js"></script>
+    <script src="./scripts/verbs.js"></script>
+</body>
+</html>
