@@ -85,8 +85,10 @@ nav .nav-buttons button:hover {
     text-align: center;
     display:flex;
     flex-flow:column;
-    justify-content: space-between;
-    gap:20%;
+    justify-content:space-between;
+    height: 45rem;
+    margin-top:5rem;
+
 }
 
 .ads-top{
@@ -95,13 +97,54 @@ nav .nav-buttons button:hover {
 }
 
 .random-word-generator{
-    text-align: center;
-    height:20rem;
+    display:flex;
+    flex-flow:column wrap;
+    gap:1rem;
+   
+    
 }
 
-.left-align{
+
+.random-word-container{
     text-align: left;
+    align-self: center;
+    display:flex;
+    flex-flow:column ;
+    justify-content: space-between;
+    gap:0.5rem;
 }
+
+.random-word-container-heading{
+    font-size: 280%;
+    margin-bottom:2rem;
+}
+
+
+.generate-words-btn{
+    width:30%;
+    align-self: center;
+    margin-top:2rem;
+    padding:0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    
+}
+
+.random-fields{
+    height:2rem;
+    font-size:120%;
+}
+
+input,select{
+    height:1.8rem;
+    
+}
+.result{
+    text-align: center;
+    margin-top:5rem;
+    font-size: 300%;
+}
+
 
 .footer-ads {
     width: 100%;
@@ -121,6 +164,9 @@ nav .nav-buttons button:hover {
     padding: 15px;
     border-top: 1px solid #495057;
 }
+
+
+/* Media Queries */
 @media (max-width: 768px) {
     nav .nav-buttons {
         display: none;

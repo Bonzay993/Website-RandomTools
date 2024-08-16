@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Website</title>
+    <title>Tools</title>
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
     </header>
     <div class="ads ads-top">
         <!-- Google Ads top -->
-    </div>
+    </div> 
     <div class="content">
         <div class="ads">
             <!-- Google Ads Left -->
@@ -38,35 +38,42 @@
         <div class="main">
             <!-- Main Content -->
             
-            
             <div class="random-word-generator">
-                <h1>Random Word Generator</h1>
                 
-                <div>
-                    <label for="numberOfWords">Number of Words:</label>
-                    <input type="number" id="numberOfWords" name="numberOfWords" min="1">
+                <div class="random-word-container">
+                    <h1 class="random-word-container-heading">Random Word Generator</h1>
+                    <div class="random-fields">
+                        <label class="random-word-label" for="numberOfWords">Number of Words:</label>
+                        <input type="number" id="numberOfWords" name="numberOfWords" min="1">
+                    </div>
+                    <div class="random-fields">
+                        <label class="random-word-label" for="wordType">Word Type:</label>
+                        <select id="wordType" name="wordType">
+                            <option value="all">All</option>
+                            <option value="noun">Noun</option>
+                            <option value="verb">Verb</option>
+                            <option value="adjective">Adjective</option>
+                        </select>
+                    </div>
+                    <div class="random-fields">
+                        <label class="random-word-label" for="wordSize">Word Size (letters):</label>
+                        <input type="number" id="wordSize" name="wordSize" min="1">
+                    </div>
+                    <button class="generate-words-btn" onclick="generateWords()">Generate Words</button>
+                    <div class="result" id="result"></div>
                 </div>
-                <div>
-                    <label for="wordType" class="left-align">Word Type:</label>
-                    <select id="wordType" name="wordType">
-                        <option value="all">All</option>
-                        <option value="noun">Noun</option>
-                        <option value="verb">Verb</option>
-                        <option value="adjective">Adjective</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="wordSize">Word Size (letters):</label>
-                    <input type="number" id="wordSize" name="wordSize" min="1">
-                </div>
-                <button onclick="generateWords()">Generate Words</button>
-                <div class="result" id="result"></div>
+            </div>
+
+            <div class="seo-content">
+                <h2>Stuff</h2>
             </div>
         
-    </div>
-    <div class="ads">
+        </div>
+        
+        <div class="ads">
         <!-- Google Ads Right -->
-    </div>
+        </div>
+        
     </div>
     
 
