@@ -11,6 +11,7 @@ body {
     justify-content: space-between;
     min-height: 100vh;
     font-family: Arial, sans-serif;
+    
 }
 header {
     width: 100%;
@@ -23,6 +24,7 @@ footer {
     background-color: #f8f9fa;
     padding: 10px;
     text-align: center;
+    
 }
 nav {
     display: flex;
@@ -71,6 +73,7 @@ nav .nav-buttons button:hover {
     flex-grow: 1;
     width: 100%;
     padding: 20px;
+    max-height:120rem;
 }
 
 
@@ -86,8 +89,10 @@ nav .nav-buttons button:hover {
     display:flex;
     flex-flow:column;
     justify-content:space-between;
-    height: 45rem;
+    min-height:45rem;
+    max-height:4000rem;
     margin-top:5rem;
+    
 
 }
 
@@ -100,7 +105,6 @@ nav .nav-buttons button:hover {
     display:flex;
     flex-flow:column wrap;
     gap:1rem;
-   
     
 }
 
@@ -124,9 +128,10 @@ nav .nav-buttons button:hover {
     width:30%;
     align-self: center;
     margin-top:2rem;
-    padding:0.5rem;
+    padding:1rem;
     cursor: pointer;
     font-weight: bold;
+    font-size: 100%;
     
 }
 
@@ -143,6 +148,14 @@ input,select{
     text-align: center;
     margin-top:5rem;
     font-size: 300%;
+    max-height:3000rem;
+    width:40rem;
+    align-self: center;
+    
+}
+
+.seo-content{
+    margin-top:10rem;
 }
 
 
