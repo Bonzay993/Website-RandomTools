@@ -115,7 +115,8 @@ nav .nav-buttons button:hover {
     display:flex;
     flex-flow:column ;
     justify-content: space-between;
-    gap:0.5rem;
+    gap:2rem;
+    
 }
 
 .random-word-container-heading{
@@ -134,6 +135,7 @@ nav .nav-buttons button:hover {
     font-size: 100%;
     
 }
+
 
 .random-fields{
     height:2rem;

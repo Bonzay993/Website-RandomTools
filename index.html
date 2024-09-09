@@ -42,24 +42,26 @@
                 
                 <form class="random-word-container">
                     <h1 class="random-word-container-heading">Random Word Generator</h1>
-                    <div class="random-fields">
-                        <label class="random-word-label" for="numberOfWords">Number of Words:</label>
-                        <input type="number" id="numberOfWords" name="numberOfWords"  min="1" >
+                    <div class="random-fields-container">
+                        <div class="random-fields">
+                            <label class="random-word-label" for="numberOfWords">Number of Words:</label>
+                            <input type="number" id="numberOfWords" name="numberOfWords"  min="1" >
+                        </div>
+                        <div class="random-fields">
+                            <label class="random-word-label" for="wordType">Word Type:</label>
+                            <select id="wordType" name="wordType">
+                                <option value="all">All</option>
+                                <option value="noun">Noun</option>
+                                <option value="verb">Verb</option>
+                                <option value="adjective">Adjective</option>
+                            </select>
+                        </div>
+                        <div class="random-fields">
+                            <label class="random-word-label" for="wordSize">Word Size (letters):</label>
+                            <input type="number" id="wordSize" name="wordSize" min="1">
+                        </div>
                     </div>
-                    <div class="random-fields">
-                        <label class="random-word-label" for="wordType">Word Type:</label>
-                        <select id="wordType" name="wordType">
-                            <option value="all">All</option>
-                            <option value="noun">Noun</option>
-                            <option value="verb">Verb</option>
-                            <option value="adjective">Adjective</option>
-                        </select>
-                    </div>
-                    <div class="random-fields">
-                        <label class="random-word-label" for="wordSize">Word Size (letters):</label>
-                        <input type="number" id="wordSize" name="wordSize" min="1">
-                    </div>
-                    <button class="generate-words-btn" onclick="generateWords()">Generate Words</button>
+                    <button type="button" class="generate-words-btn" onclick="generateWords()">Generate Words</button>
                     <div class="result" id="result"></div>
                 </form>
             </div>
