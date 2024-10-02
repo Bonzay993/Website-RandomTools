@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-indent: 5%;
+    line-height:150%;
+    
 }
 body {
     display: flex;
@@ -11,6 +14,7 @@ body {
     justify-content: space-between;
     min-height: 100vh;
     font-family: Arial, sans-serif;
+    background-color: #f6efefa2;
     
 }
 header {
@@ -76,6 +80,9 @@ nav .nav-buttons button:hover {
     max-height:120rem;
 }
 
+.hide{
+    display:none;
+}
 
 .ads {
     width: 10%;
@@ -92,8 +99,6 @@ nav .nav-buttons button:hover {
     min-height:45rem;
     max-height:4000rem;
     margin-top:5rem;
-    
-
 }
 
 .ads-top{
@@ -107,7 +112,6 @@ nav .nav-buttons button:hover {
     gap:1rem;
     
 }
-
 
 .random-word-container{
     text-align: left;
@@ -158,6 +162,13 @@ input,select{
 
 .seo-content{
     margin-top:10rem;
+    width:60%;
+    align-self: center;
+    text-align: left;
+}
+
+.seo-content-heading{
+    text-align: center;
 }
 
 
