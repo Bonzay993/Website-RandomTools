@@ -14,14 +14,17 @@ function generateWords() {
 
     // Handle case where Number of Words is 0
     if (numberOfWords <= 0) {
+        addErrorMessageStyle()
         resultText.innerText = "Number of Words cannot be 0";
         return;
     } else if (numberOfWords >= maxWordCount) {
+        addErrorMessageStyle()
         resultText.innerText = 'Maximum number of words is '+ maxWordCount;
         return;
     }
 
     if (wordSize == 0) {
+        addErrorMessageStyle()
         resultText.innerText = "Word Size can't be 0"
         return;
     }
@@ -48,6 +51,7 @@ function generateWords() {
     
     // Handle case where no words match the given word size
     if (filteredWords.length === 0) {
+        addErrorMessageStyle()
         resultText.innerText = "No words available with the specified size";
         return;
     }
@@ -61,8 +65,9 @@ function generateWords() {
 
     // Update the result text with the generated words
     resultText.innerText = words.join(', ');
+    resultText.classList.remove("error")
 }
 
-function wordListCases(){
-
+function addErrorMessageStyle(){
+    resultText.classList.add("error")
 }

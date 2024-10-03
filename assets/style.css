@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-indent: 5%;
     line-height:150%;
     
 }
@@ -14,7 +13,7 @@ body {
     justify-content: space-between;
     min-height: 100vh;
     font-family: Arial, sans-serif;
-    background-color: #f6efefa2;
+    background-color: #eeedf9a2;
     
 }
 header {
@@ -139,6 +138,9 @@ nav .nav-buttons button:hover {
     
 }
 
+.error{
+    color:#fa0303;
+}
 
 .random-fields{
     height:2rem;
@@ -156,7 +158,6 @@ input,select{
     max-height:3000rem;
     width:40rem;
     align-self: center;
-    
 }
 
 .seo-content{
