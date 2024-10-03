@@ -13,7 +13,7 @@ body {
     justify-content: space-between;
     min-height: 100vh;
     font-family: Arial, sans-serif;
-    background-color: #eeedf9a2;
+    background-color: #f9f1eda2;
     
 }
 header {
@@ -90,7 +90,7 @@ nav .nav-buttons button:hover {
     padding: 10px;
 }
 .main {
-    width: 60%;
+    width: 70%;
     text-align: center;
     display:flex;
     flex-flow:column;
@@ -107,7 +107,7 @@ nav .nav-buttons button:hover {
 .random-word-generator{
     display:flex;
     flex-flow:column wrap;
-    gap:1rem;
+    margin-bottom: 15%;
     
 }
 
@@ -117,7 +117,6 @@ nav .nav-buttons button:hover {
     display:flex;
     flex-flow:column ;
     justify-content: space-between;
-    gap:2rem;
     
 }
 
@@ -128,6 +127,7 @@ nav .nav-buttons button:hover {
 .random-word-container-heading{
     font-size: 280%;
     margin-bottom:2rem;
+    align-self: center;
 }
 
 
@@ -138,8 +138,15 @@ nav .nav-buttons button:hover {
     padding:1rem;
     cursor: pointer;
     font-weight: bold;
-    font-size: 100%;
-    
+    font-size: 100%;  
+}
+
+.seo-content{
+    color:#424345
+}
+
+.random-fields-container{
+  align-self: center;
 }
 
 .error{

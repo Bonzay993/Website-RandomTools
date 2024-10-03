@@ -1,6 +1,8 @@
 const maxWordCount = 30;
 const resultText = document.getElementById('result');
 document.querySelector(".hamburger").addEventListener("click", toggleMenu);
+document.getElementById("wordSize").defaultValue = "5";
+document.querySelector(".number-of-words-input").defaultValue = "3";
 
 function toggleMenu() {
     const mobileNav = document.getElementById('mobileNav');
