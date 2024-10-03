@@ -121,6 +121,10 @@ nav .nav-buttons button:hover {
     
 }
 
+.list{
+    padding-left:10%;
+}
+
 .random-word-container-heading{
     font-size: 280%;
     margin-bottom:2rem;
