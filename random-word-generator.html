@@ -80,17 +80,17 @@
                         </div>
                         <div class="random-fields">
                             <label class="random-word-label" for="numberOfWords">Number of Words:</label>
-                            <input class="number-of-words-input" type="number" id="numberOfWords" name="numberOfWords"  min="1">
+                            <input class="number-of-words-input" type="number" id="numberOfWords" name="numberOfWords" value="1"  min="1" max="999">
                         </div>
                         
                         <div class="random-fields">
                             <label class="random-word-label" for="wordSize">Word Size (letters):</label>
-                            <input type="number" id="wordSize" name="wordSize" min="1">
+                            <input type="number" id="wordSize" name="wordSize" value="1" min="1" max="999">
                         </div>
                     </div>
                     <div class="form-buttons-container">
-                        <button type="button" class="generate-words-btn" onclick="resetWords()">Reset</button>
-                        <button type="button" class="generate-words-btn" onclick="generateWords()">Generate Words</button>
+                        <button type="button" class="form-buttons" onclick="resetWords()">Reset</button>
+                        <button type="button" class="form-buttons generate-words-button" onclick="generateWords(), generateWordsOnEnter()">Generate Words</button>
                     </div>
                     <div class="result unselectable" id="result"></div>
                 </form>

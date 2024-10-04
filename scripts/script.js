@@ -7,6 +7,11 @@ let numberOfWordsInput = document.querySelector(".number-of-words-input")
 wordSize.defaultValue = "5";
 numberOfWordsInput.defaultValue = "3";
 
+// When Window Loads
+window.addEventListener("load", (event) => {
+    generateWordsOnEnter(); // Attach "Enter" key listener when the page loads
+});
+
 function toggleMenu() {
     const mobileNav = document.getElementById('mobileNav');
     mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
@@ -19,18 +24,18 @@ function generateWords() {
 
     // Handle case where Number of Words is 0
     if (numberOfWords <= 0) {
-        addErrorMessageStyle()
+        addErrorMessageStyle();
         resultText.innerText = "Number of Words cannot be 0";
         return;
     } else if (numberOfWords >= maxWordCount) {
-        addErrorMessageStyle()
-        resultText.innerText = 'Maximum number of words is '+ maxWordCount;
+        addErrorMessageStyle();
+        resultText.innerText = 'Maximum number of words is ' + maxWordCount;
         return;
     }
 
     if (wordSize == 0) {
-        addErrorMessageStyle()
-        resultText.innerText = "Word Size can't be 0"
+        addErrorMessageStyle();
+        resultText.innerText = "Word Size can't be 0";
         return;
     }
 
@@ -56,7 +61,7 @@ function generateWords() {
     
     // Handle case where no words match the given word size
     if (filteredWords.length === 0) {
-        addErrorMessageStyle()
+        addErrorMessageStyle();
         resultText.innerText = "No words available with the specified size";
         return;
     }
@@ -70,16 +75,36 @@ function generateWords() {
 
     // Update the result text with the generated words
     resultText.innerText = words.join(', ');
-    resultText.classList.remove("error")
+    resultText.classList.remove("error");
 }
 
-function addErrorMessageStyle(){
-    resultText.classList.add("error")
+function addErrorMessageStyle() {
+    resultText.classList.add("error");
 }
 
-function resetWords(){
+function resetWords() {
     wordSize.defaultValue = "0";
-    wordSize.value = "5"
+    wordSize.value = "5";
     numberOfWordsInput.defaultValue = "1";
-    numberOfWordsInput.value = "1"
+    numberOfWordsInput.value = "1";
+    resultText.innerText = "";
+}
+
+// **Updated "generateWordsOnEnter" function**
+function generateWordsOnEnter() {
+    // Attach the keydown event listener to the entire document
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();  // Prevent the default form submission behavior
+            generateWords();  // Call the generateWords function
+            applySearchOnEnterStyle(); // Add visual feedback
+        }
+    });
+}
+
+function applySearchOnEnterStyle() {
+    document.querySelector(".generate-words-button").classList.add("black-border");
+    setTimeout(() => {
+        document.querySelector(".generate-words-button").classList.remove("black-border");
+    }, 200);
 }
