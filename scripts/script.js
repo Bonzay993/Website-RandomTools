@@ -1,8 +1,11 @@
-const maxWordCount = 30;
+const maxWordCount = 100;
 const resultText = document.getElementById('result');
 document.querySelector(".hamburger").addEventListener("click", toggleMenu);
-document.getElementById("wordSize").defaultValue = "5";
-document.querySelector(".number-of-words-input").defaultValue = "3";
+let wordSize = document.getElementById("wordSize")
+let numberOfWordsInput = document.querySelector(".number-of-words-input")
+
+wordSize.defaultValue = "5";
+numberOfWordsInput.defaultValue = "3";
 
 function toggleMenu() {
     const mobileNav = document.getElementById('mobileNav');
@@ -72,4 +75,11 @@ function generateWords() {
 
 function addErrorMessageStyle(){
     resultText.classList.add("error")
+}
+
+function resetWords(){
+    wordSize.defaultValue = "0";
+    wordSize.value = "5"
+    numberOfWordsInput.defaultValue = "1";
+    numberOfWordsInput.value = "1"
 }

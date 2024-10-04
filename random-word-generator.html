@@ -88,8 +88,11 @@
                             <input type="number" id="wordSize" name="wordSize" min="1">
                         </div>
                     </div>
-                    <button type="button" class="generate-words-btn" onclick="generateWords()">Generate Words</button>
-                    <div class="result" id="result"></div>
+                    <div class="form-buttons-container">
+                        <button type="button" class="generate-words-btn" onclick="resetWords()">Reset</button>
+                        <button type="button" class="generate-words-btn" onclick="generateWords()">Generate Words</button>
+                    </div>
+                    <div class="result unselectable" id="result"></div>
                 </form>
             </div>
 
