@@ -32,9 +32,10 @@ header {
 footer {
   width: 100%;
   height: 10rem;
-  background-color: #f8f9fa;
+  background-color: #343a40;
   padding: 10px;
   text-align: center;
+  color:#f8f9fa;
 }
 
 nav {
@@ -212,6 +213,7 @@ label {
   text-align: left;
   font-size: 90%;
   color: #282a2d;
+  margin-bottom:10%;
 }
 
 .seo-content-heading {
@@ -331,16 +333,23 @@ label {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 376px) {
 
   .content{
     margin:0 auto;
     padding:0;
   }
   .random-word-container {
-    width: 19rem
+    width: 19rem;
+    font-size: 70%;;
+  }
+  .random-fields-container{
+    width:17rem;
   }
 
+  input, select{
+    width:25%
+  }
   .seo-content{
     width: 19rem;
   }
